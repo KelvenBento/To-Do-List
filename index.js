@@ -1,20 +1,18 @@
-function atribuir(){
-    const todoInput = document.getElementById('todoInput').value;
-    const list = document.getElementById('list');
+const todoInput = document.getElementById('todoInput');
+
+todoInput.addEventListener('keyup', function (event){
+
+    if(event.key != 'Enter' || event.keyCode != 13 || todoInput.value.trim() === ""){
+        return;
+    }
+
+    const list = document.getElementById('list')
+    const inputValue = todoInput.value;
 
     const newTodo = document.createElement('li');
-    const newContent = document.createTextNode(todoInput);
+    const newContent = document.createTextNode(inputValue);      
 
-    const vari = document.getElementById(newContent);
-    vari.value = hello
-
-
-
+    newTodo.appendChild(newContent);
+    list.appendChild(newTodo);
     
-    newTodo.appendChild(newContent)
-    list.appendChild(newTodo)
-    
-    console.log(newContent);
-    console.log(list);  
-    
-}
+});
