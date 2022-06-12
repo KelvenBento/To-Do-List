@@ -14,5 +14,9 @@ todoInput.addEventListener('keyup', function (event){
 
     newTodo.appendChild(newContent);
     list.appendChild(newTodo);
-    
+
+    if (event.key === 'Enter' || event.keyCode === 13) {
+        onfocus= this.value='';
+    }
+
 });
