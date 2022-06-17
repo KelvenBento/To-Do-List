@@ -10,6 +10,9 @@ todoInput.addEventListener('keyup', function (event){
     const inputValue = todoInput.value;
 
     const newTodo = document.createElement('li');
+
+    newTodo.setAttribute('class', 'row');
+    
     const newContent = document.createTextNode(inputValue);      
 
     newTodo.appendChild(newContent);
